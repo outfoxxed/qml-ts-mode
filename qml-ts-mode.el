@@ -346,10 +346,6 @@ Return nil if there is no name or if NODE is not a defun node."
 
   (setq-local treesit-defun-name-function #'qml--treesit-defun-name)
 
-  (setq-local treesit-sentence-type-regexp
-              (regexp-opt js--treesit-sentence-nodes))
-
-
   ;; Imenu
   (setq treesit-simple-imenu-settings
         `(("Function" "\\`function_declaration\\'" nil nil)
